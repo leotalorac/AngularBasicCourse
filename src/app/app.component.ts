@@ -19,6 +19,11 @@ export class AppComponent {
   imgurl = "https://source.unsplash.com/random";
   disable = true;
   valuetext = 'lios'
+  register = {
+    name:'',
+    email:'',
+    password:''
+  }
   person = {
     name: "luis",
     age: 23,
@@ -81,5 +86,8 @@ export class AppComponent {
   }
   deleteEmoji(index:number){
     this.emojis.splice(index,1)
+  }
+  onRegister(){
+    console.log(this.register)
   }
 }

@@ -1,3 +1,26 @@
+<h1>Form</h1>
+<form #myForm="ngForm" (ngSubmit)="onRegister()">
+  <div class="input-group">
+    <label for="">Name</label>
+    <input type="text" required [(ngModel)]="register.name" id="name" name="name">
+    <p>Error message</p>
+  </div>
+  <div class="input-group">
+    <label for="">Email</label>
+    <input type="email" required [(ngModel)]="register.email" id="email" name="email">
+    <p>Error message</p>
+  </div>
+  <div class="input-group">
+    <label for="">Password</label>
+    <input type="password" required [(ngModel)]="register.password" id="password" name="password">
+    <p>Error message</p>
+  </div>
+  <button [disabled]="myForm.invalid" type="submit">Register</button>
+</form>
+
+
+
+
 <h1>NgClass and BgStyle</h1>
 <input type="text" required #nameInput5="ngModel" [(ngModel)]="person.name" />
 <hr
@@ -137,3 +160,4 @@
 <h1>Events</h1>
 <button [disabled]="disable">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
+
