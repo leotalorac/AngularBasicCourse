@@ -3,3 +3,32 @@
   width: 200px
   overflow: auto
   background-color: aqua
+.products--grid
+  display: flex
+  flex-direction: column
+  div
+    img
+      width: 100px
+      border-radius: 10px
+    h2,p
+      margin: 0
+@media screen and ( min-width: 40em )
+  .products--grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 15px
+
+.message--error
+  color: white
+  background-color: red
+  opacity: 0
+  transition: all linear .5s
+  &.show
+    opacity: 1
+.line-error
+  height: 0
+  border-bottom: 1px solid
+  &.invalid
+    border-color: red
+  &.valid
+    border-color: green
