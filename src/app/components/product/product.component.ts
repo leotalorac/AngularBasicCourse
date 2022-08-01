@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, AfterViewInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/product.model';
 
 @Component({
@@ -17,6 +17,9 @@ export class ProductComponent implements OnInit, OnChanges, AfterViewInit, OnDes
   };
   @Input()
   showImage=true
+
+  @Output()
+  addedProduct = new EventEmitter<Product>();
 
   constructor() {
     // Before render
@@ -39,4 +42,7 @@ export class ProductComponent implements OnInit, OnChanges, AfterViewInit, OnDes
     // async request (API calls)- once time
   }
 
+  onAddToCart(){
+    this.addedProduct.emit(this.product)
+  }
 }
