@@ -1,6 +1,8 @@
 <div>
   <img [src]="product.image" alt="" *ngIf="showImage">
-  <h2>{{product.name}}</h2>
+  <h2>{{product.title}}</h2>
   <p>$ {{product.price}}</p>
+  <p>{{product.description || ""}}</p>
+  <p>{{product.category || ""}}</p>
   <button (click)="onAddToCart()">Add to cart</button>
 </div>
