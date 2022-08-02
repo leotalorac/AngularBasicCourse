@@ -34,18 +34,22 @@ export class ProductComponent implements OnInit, OnChanges, AfterViewInit, OnDes
     // Before render
     // not async request - run once
   }
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnDestroy(): void {
     // When the component is deleted
   }
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngAfterViewInit(): void {
     // After render
     // handle children
   }
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnChanges(): void {
     // before render and during changes
     // update changes on inputs
   }
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit(): void {
     // before render
     // async request (API calls)- once time
