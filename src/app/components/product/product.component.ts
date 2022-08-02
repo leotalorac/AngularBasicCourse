@@ -22,6 +22,9 @@ export class ProductComponent implements OnInit, OnChanges, AfterViewInit, OnDes
 
   total:number = 0;
 
+  today = new Date();
+  date = new Date(21,3,2022);
+
   @Output()
   addedProduct = new EventEmitter<Product>();
 
